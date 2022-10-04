@@ -30,7 +30,7 @@ function fetchRequest(formData, file){
         textArea.innerText = result
         form.querySelector("img").src = URL.createObjectURL(file)
         wrapper.classList.add("active")
-        console.log(result);
+        // console.log(result);
     }).catch(()=>{
         infoText.innerText = "Couldn't Scan QR Code"
     })
@@ -57,4 +57,7 @@ form.addEventListener('click',()=>{
 
 closeBtn.addEventListener("click",()=>{
     wrapper.classList.remove("active")
+    setTimeout(()=>{
+        window.location.reload()
+    },550)
 })

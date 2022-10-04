@@ -12,14 +12,14 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #E3F2FD;
+    background-image: linear-gradient(#AD1DEB,#6E72FC)
 }
 
 .wrapper {
     height: 270px;
     width: 420px;
     border-radius: 7px;
-    background: #0B85FF;
+    background-image: linear-gradient(to right,#AD1DEB,#6E72FC);
     padding: 30px 30px 35px;
     transition: height 0.4s ease;
 }
@@ -58,12 +58,13 @@ form img{
 }
 
 form .content i{
-    color: #0B85FF;
+    color: #AD1DEB;
+    /* background: linear-gradient(to right,#AD1DEB,#6E72FC); */
     font-size: 55px;
 }
 
 form .content p{
-    color: #0B85FF;
+    color: #6E72FC;
     font-size: 1rem;
     margin-top: 1rem;
 }
@@ -108,7 +109,7 @@ form .content p{
     background: none;
     border: 1px solid #fff;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 5px;
 }
 
@@ -121,9 +122,9 @@ form .content p{
 .buttons button {
     outline: none;
     border: none;
-    color: #0B85FF;
+    color: #AD1DEB;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 5px;
     background: #fff;
