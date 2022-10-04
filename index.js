@@ -6,6 +6,19 @@ const textArea = document.getElementById('textArea')
 const copyBtn = document.querySelector('.copy')
 const closeBtn = document.querySelector('.close')
 
+const message = "Copied To Clipboard"
+
+function createNotification(messagetext = message) {
+    const notif = document.createElement('div')
+    notif.classList.add('toast')
+    notif.innerText = messagetext
+    toasts.appendChild(notif)
+
+    setTimeout(()=>{
+        notif.remove()
+    },2500)
+}
+
 function fetchRequest(formData, file){
     infoText.innerText = "Scanning QR Code..."
     fetch("http://api.qrserver.com/v1/read-qr-code/",{
@@ -35,6 +48,7 @@ fileInput.addEventListener('change',e => {
 copyBtn.addEventListener("click",()=>{
     let text = textArea.textContent;
     navigator.clipboard.writeText(text)
+    createNotification()
 })
 
 form.addEventListener('click',()=>{
