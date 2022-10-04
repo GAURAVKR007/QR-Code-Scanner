@@ -21,6 +21,11 @@ body {
     border-radius: 7px;
     background: #0B85FF;
     padding: 30px 30px 35px;
+    transition: height 0.4s ease;
+}
+
+.wrapper.active{
+    height: 525px;
 }
 
 .wrapper form{
@@ -34,13 +39,22 @@ body {
     border-radius: 7px;
 }
 
-form img{
-    display: none;
-    max-width: 148px;
+.wrapper.active form{
+    height: 225px;
+    pointer-events: none;
 }
 
-form .content{
-    /* display: none; */
+form img{
+    display: none;
+    max-width: 150px;
+}
+
+.wrapper.active form img{
+    display: block;
+}
+
+.wrapper.active form .content{
+    display: none;
 }
 
 form .content i{
@@ -58,6 +72,13 @@ form .content p{
     margin-top: 25px;
     opacity: 0;
     pointer-events: none;
+}
+
+.wrapper.active .details{
+    /* margin-top: 25px; */
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.5s ease;
 }
 
 .details textarea{
